@@ -1,0 +1,37 @@
+/* Base styles and Box Model demonstration */
+
+.profile-card {
+  /* Box Model: Margin */
+  margin: 1rem auto;
+
+  /* Box Model: Border */
+  border: 1px solid #e5e7eb;
+
+  /* Box Model: Padding */
+  padding: 1.5rem;
+
+  box-sizing: border-box;
+}
+
+/* Flexbox link layout */
+.links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Like button styles */
+.like-button {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+}
+
+/* Active like button state toggled via JS */
+.like-button.liked {
+  background-color: #fee2e2;
+  color: #ef4444;
+  border-color: #fca5a5;
+}
