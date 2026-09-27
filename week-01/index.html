@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shugyla - Personal Profile</title>
+</head>
+<body>
+
+  <header>
+    <h1>Shugyla</h1>
+    <p>Aspiring Web Developer | Learning HTML & Git</p>
+  </header>
+
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#goals">Course Goals</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="https://via.placeholder.com/150" alt="Placeholder portrait avatar">
+      <p>
+        Hello! I am a student starting the IWaMAD course. My goal for this semester is to understand 
+        how web technologies work from scratch, practice semantic HTML, and learn how to build real apps.
+      </p>
+      <p>Started learning web development: <time datetime="2026-09">September 2026</time>.</p>
+    </section>
+
+    <section id="skills">
+      <h2>My Current Skills</h2>
+      <ul>
+        <li>Basic HTML structure and tags</li>
+        <li>Git commands (init, add, commit, push)</li>
+        <li>Working with GitHub and branches</li>
+        <li>Writing code in VS Code</li>
+      </ul>
+    </section>
+
+    <section id="goals">
+      <h2>Semester Goals & Progress</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th scope="col">Topic</th>
+            <th scope="col">Current Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Git & GitHub Workflow</td>
+            <td>Practicing now</td>
+          </tr>
+          <tr>
+            <td>HTML5 & Web Semantics</td>
+            <td>Beginner</td>
+          </tr>
+          <tr>
+            <td>Responsive Layouts (CSS)</td>
+            <td>Starting next week</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>
+        You can email me here: 
+        <a href="mailto:s_zhambybay@kbtu.kz">s_zhambybay@kbtu.kz</a>
+      </p>
+
+      <form action="#" method="post">
+        <div>
+          <label for="name">Your Name:</label><br>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <br>
+        <div>
+          <label for="email">Your Email:</label><br>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <br>
+        <div>
+          <label for="message">Your Message:</label><br>
+          <textarea id="message" name="message" rows="4" cols="30" required></textarea>
+        </div>
+        <br>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shugyla. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
