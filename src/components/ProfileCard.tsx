@@ -1,22 +1,16 @@
-import { useState } from 'react';
-import type { NavLink } from './NavLinkItem';
-import { NavLinkItem } from './NavLinkItem';
+import type { NavLink } from './NavLinkItem'
+import { NavLinkItem } from './NavLinkItem'
+import { LikeButton } from './LikeButton'
 
 interface ProfileCardProps {
-  name: string;
-  role: string;
-  bio: string;
-  avatarUrl?: string;
-  links: NavLink[];
+  name: string
+  role: string
+  bio: string
+  avatarUrl?: string
+  links: NavLink[]
 }
 
 export const ProfileCard = ({ name, role, bio, avatarUrl, links }: ProfileCardProps) => {
-  const [isLiked, setIsLiked] = useState<boolean>(false);
-
-  const toggleLike = () => {
-    setIsLiked((prev) => !prev);
-  };
-
   return (
     <article className="profile-card bg-white rounded-2xl shadow-lg p-6 max-w-sm w-full transition-all">
       <div className="card-content flex flex-col items-center text-center">
@@ -32,15 +26,7 @@ export const ProfileCard = ({ name, role, bio, avatarUrl, links }: ProfileCardPr
 
         <p className="text-sm text-gray-600 mb-6">{bio}</p>
 
-        <button
-          id="like-btn"
-          onClick={toggleLike}
-          className={`like-button mb-6 px-4 py-2 rounded-full font-medium transition-all ${
-            isLiked ? 'liked' : ''
-          }`}
-        >
-          {isLiked ? '❤️ Liked' : '🤍 Like'}
-        </button>
+        <LikeButton />
 
         <div className="links-container flex justify-center gap-4 w-full pt-4 border-t border-gray-100">
           {links.length > 0 ? (
@@ -53,5 +39,5 @@ export const ProfileCard = ({ name, role, bio, avatarUrl, links }: ProfileCardPr
         </div>
       </div>
     </article>
-  );
-};
+  )
+}
