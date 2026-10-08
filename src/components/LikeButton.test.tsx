@@ -1,0 +1,19 @@
+import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import { test, expect } from 'vitest'
+import { LikesProvider } from '../context/LikesContext'
+import { LikeButton } from './LikeButton'
+
+test('renders like button and increments count on click', async () => {
+  render(
+    <LikesProvider>
+      <LikeButton />
+    </LikesProvider>
+  )
+
+  const button = screen.getByRole('button')
+  expect(button).toHaveTextContent('♥ 0')
+
+  await userEvent.click(button)
+  expect(button).toHaveTextContent('♥ 1')
+})
