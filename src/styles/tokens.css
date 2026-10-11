@@ -1,0 +1,26 @@
+:root {
+  /* Colors */
+  --color-primary: #1d4ed8;
+  --color-primary-hover: #1e40af;
+  --color-secondary: #f1f5f9;
+  --color-secondary-text: #0f172a;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0;
+
+  /* Spacing */
+  --space-2: 8px;
+  --space-4: 16px;
+  --space-6: 24px;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Focus ring */
+  --focus-ring: 2px solid var(--color-primary);
+  --focus-ring-offset: 2px;
+}
