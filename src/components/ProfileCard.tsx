@@ -1,6 +1,7 @@
 import type { NavLink } from './NavLinkItem'
 import { NavLinkItem } from './NavLinkItem'
 import { LikeButton } from './LikeButton'
+import { Card } from './ui/Card'
 
 interface ProfileCardProps {
   name: string
@@ -12,7 +13,7 @@ interface ProfileCardProps {
 
 export const ProfileCard = ({ name, role, bio, avatarUrl, links }: ProfileCardProps) => {
   return (
-    <article className="profile-card bg-white rounded-2xl shadow-lg p-6 max-w-sm w-full transition-all">
+    <Card className="profile-card max-w-sm w-full">
       <div className="card-content flex flex-col items-center text-center">
         {avatarUrl && (
           <img
@@ -22,9 +23,13 @@ export const ProfileCard = ({ name, role, bio, avatarUrl, links }: ProfileCardPr
           />
         )}
         <h2 className="text-xl font-semibold mb-1">{name}</h2>
-        <p className="text-sm text-indigo-600 font-medium mb-3">{role}</p>
+        <p className="text-sm font-medium mb-3" style={{ color: 'var(--color-primary)' }}>
+          {role}
+        </p>
 
-        <p className="text-sm text-gray-600 mb-6">{bio}</p>
+        <p className="text-sm mb-6" style={{ color: 'var(--color-text-muted)' }}>
+          {bio}
+        </p>
 
         <LikeButton />
 
@@ -34,10 +39,12 @@ export const ProfileCard = ({ name, role, bio, avatarUrl, links }: ProfileCardPr
               <NavLinkItem key={link.id} item={link} />
             ))
           ) : (
-            <span className="text-xs text-gray-400">No links provided</span>
+            <span className="text-xs" style={{ color: 'var(--color-text-muted)' }}>
+              No links provided
+            </span>
           )}
         </div>
       </div>
-    </article>
+    </Card>
   )
 }

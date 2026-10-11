@@ -1,15 +1,18 @@
 import { useLikes } from '../context/LikesContext'
+import { Button } from './ui/Button'
 
 export const LikeButton = () => {
   const { likes, addLike } = useLikes()
 
   return (
-    <button
+    <Button
       id="like-btn"
+      variant="primary"
       onClick={addLike}
-      className="like-button mb-6 px-4 py-2 rounded-full font-medium transition-all"
+      aria-label={`Like (${likes} ${likes === 1 ? 'like' : 'likes'})`}
+      className="like-button mb-6"
     >
       ♥ {likes}
-    </button>
+    </Button>
   )
 }
