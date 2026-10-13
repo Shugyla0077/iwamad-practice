@@ -15,7 +15,7 @@ export const Header = ({ title }: HeaderProps) => {
         <img src={logo} alt="" width={32} height={32} className="w-8 h-8 object-contain" />
         <h1 className="text-xl font-bold m-0">{title}</h1>
       </div>
-      <nav className="flex items-center gap-4">
+      <nav className="flex items-center gap-4 flex-wrap justify-center">
         <NavLink to="/" end className={({ isActive }) => (isActive ? 'active nav-link' : 'nav-link')}>
           Home
         </NavLink>
@@ -24,6 +24,9 @@ export const Header = ({ title }: HeaderProps) => {
         </NavLink>
         <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active nav-link' : 'nav-link')}>
           Contact
+        </NavLink>
+        <NavLink to="/register" className={({ isActive }) => (isActive ? 'active nav-link' : 'nav-link')}>
+          Register
         </NavLink>
         <span className="likes-counter font-semibold text-rose-600">♥ {likes}</span>
       </nav>
