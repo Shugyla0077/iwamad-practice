@@ -1,12 +1,14 @@
+import { Tag } from './ui/Tag'
+
 export interface Skill {
-  id: number;
-  label: string;
+  id: number
+  label: string
 }
 
 interface SkillBadgeProps {
-  skill: Skill;
+  skill: Skill
 }
 
 export const SkillBadge = ({ skill }: SkillBadgeProps) => {
-  return <span className="skill-badge">{skill.label}</span>;
-};
+  return <Tag label={skill.label} />
+}
