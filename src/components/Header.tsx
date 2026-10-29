@@ -28,6 +28,9 @@ export const Header = ({ title }: HeaderProps) => {
         <NavLink to="/register" className={({ isActive }) => (isActive ? 'active nav-link' : 'nav-link')}>
           Register
         </NavLink>
+        <NavLink to="/events" className={({ isActive }) => (isActive ? 'active nav-link' : 'nav-link')}>
+          Events
+        </NavLink>
         <span className="likes-counter font-semibold text-rose-600">♥ {likes}</span>
       </nav>
     </header>

@@ -4,6 +4,8 @@ import { HomePage } from './pages/HomePage'
 import { SkillsPage } from './pages/SkillsPage'
 import { ContactPage } from './pages/ContactPage'
 import { RegisterPage } from './pages/RegisterPage'
+import { EventsPage } from './pages/EventsPage'
+import { EventDetailsPage } from './pages/EventDetailsPage'
 import { NotFoundPage } from './pages/NotFoundPage'
 import './App.css'
 
@@ -15,6 +17,8 @@ function App() {
         <Route path="skills" element={<SkillsPage />} />
         <Route path="contact" element={<ContactPage />} />
         <Route path="register" element={<RegisterPage />} />
+        <Route path="events" element={<EventsPage />} />
+        <Route path="events/:eventId" element={<EventDetailsPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
